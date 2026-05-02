@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Помочь — Невозможное возможно</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="Благотворительный фонд Невозможное возможно" />
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="about.html">О фонде</a>
+        <a href="help.html">Помочь</a>
+        <a href="collections.html">Сборы</a>
+        <a href="stories.html">Истории</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+
+     <a href="help.html" class="header-help">
+        <span>♡</span>
+        Помочь
+      </a>
+
+      <button class="burger" id="burger" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="page-main">
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Как помочь</h1>
+      <p>
+        Вы можете поддержать фонд удобным способом: сделать пожертвование,
+        стать волонтёром, передать вещи или помочь как компания.
+      </p>
+    </div>
+  </section>
+
+<section class="donation-section">
+  <div class="container">
+    <div class="donation-box">
+      <div class="donation-box__content">
+        <span class="section-label">Помочь сейчас</span>
+
+        <h2>Сделать пожертвование</h2>
+
+        <p>
+          Выберите удобную сумму или укажите свою. Сейчас форма работает
+          в тестовом режиме — реальную оплату подключим позже.
+        </p>
+      </div>
+
+      <form class="donation-form" id="donationForm">
+        <div class="donation-form__type">
+          <label>
+            <input type="radio" name="donationType" value="once" checked />
+            <span>Разово</span>
+          </label>
+
+          <label>
+            <input type="radio" name="donationType" value="monthly" />
+            <span>Ежемесячно</span>
+          </label>
+        </div>
+
+        <div class="donation-amounts">
+          <button type="button" class="amount-btn is-active" data-amount="300">300 ₽</button>
+          <button type="button" class="amount-btn" data-amount="500">500 ₽</button>
+          <button type="button" class="amount-btn" data-amount="1000">1 000 ₽</button>
+          <button type="button" class="amount-btn" data-amount="3000">3 000 ₽</button>
+        </div>
+
+        <label class="form-field">
+          <span>Своя сумма</span>
+          <input type="number" id="customAmount" name="customAmount" min="1" placeholder="Например, 1500" />
+        </label>
+
+        <div class="form-row">
+          <label class="form-field">
+            <span>Ваше имя</span>
+            <input type="text" name="donorName" placeholder="Иван" />
+          </label>
+
+          <label class="form-field">
+            <span>Email или телефон</span>
+            <input type="text" name="donorContact" placeholder="mail@example.ru" required />
+          </label>
+        </div>
+
+        <label class="checkbox-field">
+          <input type="checkbox" name="agreement" required />
+          <span>
+            Я согласен с обработкой персональных данных и понимаю,
+            что форма пока работает в тестовом режиме.
+          </span>
+        </label>
+
+        <button type="submit" class="btn btn--orange donation-form__submit">
+          Продолжить
+        </button>
+
+        <div class="form-message" id="donationMessage"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+  <section class="page-content">
+    <div class="container">
+      <div class="page-grid">
+
+        <div class="page-card page-card--peach">
+          <h3>Пожертвовать</h3>
+          <p>
+            Любая сумма важна. Даже небольшая помощь приближает ребёнка
+            к необходимому лечению или поддержке.
+          </p>
+        </div>
+
+        <div class="page-card page-card--peach">
+          <h3>Стать волонтёром</h3>
+          <p>
+            Вы можете помогать на мероприятиях, доставлять вещи,
+            поддерживать семьи и участвовать в проектах фонда.
+          </p>
+        </div>
+
+        <div class="page-card page-card--peach">
+          <h3>Помочь вещами</h3>
+          <p>
+            Мы принимаем одежду, игрушки, средства ухода, технику
+            и другие необходимые вещи в хорошем состоянии.
+          </p>
+        </div>
+
+        <div class="page-card">
+          <h3>Помощь компаниям</h3>
+          <p>
+            Компании могут стать партнёрами фонда, поддержать конкретный сбор
+            или организовать благотворительную акцию.
+          </p>
+        </div>
+
+        <div class="page-card">
+          <h3>Информационная помощь</h3>
+          <p>
+            Расскажите о фонде в социальных сетях — это помогает быстрее
+            находить людей, готовых поддержать сборы.
+          </p>
+        </div>
+
+        <div class="page-card">
+          <h3>Реквизиты</h3>
+          <p>
+            Позже здесь можно разместить банковские реквизиты фонда
+            для переводов от физических и юридических лиц.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="page-content">
+    <div class="container page-text">
+      <h2>Онлайн-пожертвование</h2>
+
+      <p>
+        Сейчас раздел пожертвований находится в подготовке. Позже мы подключим
+        платёжную систему и добавим удобную форму для разовой или регулярной помощи.
+      </p>
+
+      <a href="collections.html" class="btn btn--orange">Посмотреть сборы</a>
+    </div>
+  </section>
+
+</main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <a href="index.html" class="footer__logo">
+          <img src="images/logo.png" alt="Невозможное возможно" />
+        </a>
+
+        <div class="footer__contacts">
+  <h3>Контакты</h3>
+
+  <p class="footer-contact">
+    <span class="footer-contact__icon">
+      <img src="images/icons/phone.png" alt="" />
+    </span>
+
+    <a href="tel:+74551234567">+7 (455) 123-45-67</a>
+  </p>
+
+  <p class="footer-contact">
+    <span class="footer-contact__icon">
+      <img src="images/icons/mail.png" alt="" />
+    </span>
+
+    <a href="mailto:nevozmojnoe.vozmojno@list.ru">
+      nevozmojnoe.vozmojno@list.ru
+    </a>
+  </p>
+
+  <p class="footer-contact">
+    <span class="footer-contact__icon">
+      <img src="images/icons/location.png" alt="" />
+    </span>
+
+    <span>г. Москва, ул. Добрая, д. 1</span>
+  </p>
+</div>
+
+<div class="footer__social">
+  <h3>Мы в соцсетях</h3>
+
+  <div class="socials">
+    <a href="#" aria-label="ВКонтакте">
+      <img src="images/icons/vk.png" alt="" />
+    </a>
+
+    <a href="#" aria-label="Telegram">
+      <img src="images/icons/tg.png" alt="" />
+    </a>
+
+    <a href="#" aria-label="Одноклассники">
+      <img src="images/icons/ok.png" alt="" />
+    </a>
+  </div>
+</div>
+
+      <div class="footer__bottom">
+        <span>© 2021 - 2026</span>
+        <span>Благотворительный фонд<br />«Невозможное возможно»</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
