@@ -209,4 +209,50 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   }
+  // Hero carousel
+  const heroCarousel = document.querySelector('[data-hero-carousel]');
+
+  if (heroCarousel) {
+    const slides = heroCarousel.querySelectorAll('.hero-carousel__slide');
+
+    if (slides.length > 1) {
+      let currentSlide = 0;
+      let carouselInterval = null;
+
+      const showSlide = (index) => {
+        slides[currentSlide].classList.remove('is-active');
+
+        currentSlide = index;
+
+        slides[currentSlide].classList.add('is-active');
+      };
+
+      const showNextSlide = () => {
+        const nextSlide = (currentSlide + 1) % slides.length;
+        showSlide(nextSlide);
+      };
+
+      const stopCarousel = () => {
+        if (carouselInterval) {
+          clearInterval(carouselInterval);
+        }
+      };
+
+      const startCarousel = () => {
+        stopCarousel();
+        carouselInterval = setInterval(showNextSlide, 5000);
+      };
+
+      startCarousel();
+
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+          stopCarousel();
+        } else {
+          startCarousel();
+        }
+      });
+    }
+  }
 });
+
